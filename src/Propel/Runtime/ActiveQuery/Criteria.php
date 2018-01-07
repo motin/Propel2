@@ -2621,7 +2621,7 @@ class Criteria
                 $affectedRows = $stmt->rowCount();
             } catch (\Exception $e) {
                 Propel::log($e->getMessage(), Propel::LOG_ERR);
-                throw new PropelException(sprintf('Unable to execute DELETE statement [%s]', $sql), 0, $e);
+                throw new PropelException(sprintf('Unable to execute DELETE statement [%s]', $sql) . " . " . $e->getMessage() . " . params: " . print_r($params, true), 0, $e);
             }
 
         } // for each table

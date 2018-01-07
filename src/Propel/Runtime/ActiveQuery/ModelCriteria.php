@@ -1516,7 +1516,7 @@ class ModelCriteria extends BaseModelCriteria
                 return $affectedRows;
             });
         } catch (PropelException $e) {
-            throw new PropelException(__METHOD__  . ' is unable to delete. ', 0, $e);
+            throw new PropelException(__METHOD__  . ' is unable to delete. ' . $e->getMessage(), 0, $e);
         }
     }
 
