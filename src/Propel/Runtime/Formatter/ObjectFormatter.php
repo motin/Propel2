@@ -157,6 +157,10 @@ class ObjectFormatter extends AbstractFormatter
             }
         }
 
+        //codecept_debug('$this->getAsColumns()');
+        //codecept_debug($this->getAsColumns());
+        //var_dump(__LINE__, $row, $col, $row[$col], $this->getAsColumns());
+
         // columns added using withColumn()
         foreach ($this->getAsColumns() as $alias => $clause) {
             $obj->setVirtualColumn($alias, $row[$col]);
